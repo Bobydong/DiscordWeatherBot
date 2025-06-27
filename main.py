@@ -2,7 +2,6 @@ import requests
 import smtplib
 from email.message import EmailMessage
 import time
-import schedule 
 from datetime import datetime, timedelta
 import os
 print("Script started. Current local time is:", datetime.now().strftime("%H:%M")) #finds the enviornment's local time
@@ -42,20 +41,6 @@ def get_weather(city_name): #uses their 2.5 version bc that one is completely fr
   #    txt = f"Hello! \nThe current temperature in {city_name}, is {temp}°F and feels like {feels_like}°F. There is currently {desc} with winds of {wind_speed}.\nThe humidity is {humidity}%"
     print(txt)
     return txt
-
-def send_email(subject, body, to):
-    msg = EmailMessage()
-    msg['Subject'] = subject
-    msg["From"] = EMAIL
-    msg['to'] = to
-    msg.set_content(body)
-    with smtplib.SMTP("smtp.gmail.com", 587) as server:
-        server.starttls()
-        password = os.getenv("EMAIL_APP_PASSWORD")
-        server.login(EMAIL, password)
-        server.send_message(msg)
-    print("Email sent to", to)
-    #the email may be formatted weird becuase the get_weather function is formatted for discord specifically
 
 def send_discord_message(webhook_url, message):
     payload = {"content": message}
@@ -108,20 +93,9 @@ def get_forecast(city_name):
 
     return forecast_txt
 
-
-#=====scheduling====== 
-schedule.every().day.at(SEND_TIME).do(send_daily_weather)
-
-
-
-#=========Run it===========
-#send_email(subject="Weather Update", body = get_weather("Livingston, NJ, US"), to = "chiangyienne17@gmail.com")
-#send_discord_message(DISCORD_WEBHOOK_URL, get_weather(CITY))
-#send_daily_weather()
-while True:
-    print(datetime.now().strftime("%H:%M") + f"✅ Scheduled to send at {SEND_TIME}. Waiting for time match...")
-    send_discord_message(DISCORD_WEBHOOK_URL, datetime.now().strftime("%H:%M") + " Github code is now running...")
-    schedule.run_pending()
-    time.sleep(3600)
-
-
+if __name__ == "__main__":
+    print("⏰ Running weather bot...")
+    current = get_weather(CITY)
+    forecast = get_forecast(CITY)
+    message = f"{current}\n{forecast}"
+    send_discord_message(message)
