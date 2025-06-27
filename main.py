@@ -68,7 +68,7 @@ def send_discord_message(webhook_url, message):
 def send_daily_weather():
     current = get_weather(CITY)
     forecast = get_forecast(CITY)
-    message = f"{current}\n\n{forecast}"
+    message = f"Good Morning!! \n{current}\n\n{forecast}"
     send_discord_message(DISCORD_WEBHOOK_URL, message)
     print("sent")
 
