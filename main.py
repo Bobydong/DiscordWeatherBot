@@ -98,4 +98,4 @@ if __name__ == "__main__":
     current = get_weather(CITY)
     forecast = get_forecast(CITY)
     message = f"{current}\n{forecast}"
-    send_daily_weather(DISCORD_WEBHOOK_URL, message)
+    send_daily_weather()
