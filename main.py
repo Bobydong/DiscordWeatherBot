@@ -122,6 +122,6 @@ while True:
     print(datetime.now().strftime("%H:%M") + f"✅ Scheduled to send at {SEND_TIME}. Waiting for time match...")
     send_discord_message(DISCORD_WEBHOOK_URL, datetime.now().strftime("%H:%M") + " Github code is now running...")
     schedule.run_pending()
-    time.sleep(60)
+    time.sleep(3600)
 
 
