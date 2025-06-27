@@ -120,6 +120,7 @@ schedule.every().day.at(SEND_TIME).do(send_daily_weather)
 #send_daily_weather()
 while True:
     print(datetime.now().strftime("%H:%M") + f"✅ Scheduled to send at {SEND_TIME}. Waiting for time match...")
+    send_discord_message(DISCORD_WEBHOOK_URL, datetime.now().strftime("%H:%M") + "Github code is now running...")
     schedule.run_pending()
     time.sleep(60)
 
