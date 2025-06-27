@@ -68,7 +68,7 @@ def send_discord_message(webhook_url, message):
 def send_daily_weather():
     current = get_weather(CITY)
     forecast = get_forecast(CITY)
-    message = f"Good Morning!! \n{current}\n\n{forecast}"
+    message = f"@brugen \nGood Morning!! \n{current}\n\n{forecast}"
     send_discord_message(DISCORD_WEBHOOK_URL, message)
     print("sent")
 
@@ -120,7 +120,7 @@ schedule.every().day.at(SEND_TIME).do(send_daily_weather)
 #send_daily_weather()
 while True:
     print(datetime.now().strftime("%H:%M") + f"✅ Scheduled to send at {SEND_TIME}. Waiting for time match...")
-    send_discord_message(DISCORD_WEBHOOK_URL, datetime.now().strftime("%H:%M") + "Github code is now running...")
+    send_discord_message(DISCORD_WEBHOOK_URL, datetime.now().strftime("%H:%M") + " Github code is now running...")
     schedule.run_pending()
     time.sleep(60)
 
