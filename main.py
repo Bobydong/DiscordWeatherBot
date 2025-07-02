@@ -3,7 +3,7 @@ import time
 from datetime import datetime, timedelta
 import os
 
-
+#hello
 print("Script started. Current local time is:", datetime.now().strftime("%H:%M")) #finds the enviornment's local time
 
 API_KEY = os.getenv("API_KEY")
