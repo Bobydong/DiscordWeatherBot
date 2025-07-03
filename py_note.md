@@ -16,9 +16,9 @@ https://docs.python.org/3/tutorial/introduction.html
 4. use 'in' to test if container contains a value
 
 ### str
-* '', ""
+* ' ', " "
 * escape \ (\n, \t)
-* triple-quotes """....""", '''...''' (keep originalformat, etc. line break)
+* triple-quotes """....""", '''...''' (keep original format, etc. line break)
   1. unescape \
 * raw string => print(r'C:\some\name')
 * sequence => indexing & slicing
