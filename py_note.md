@@ -4,7 +4,7 @@ https://docs.python.org/3/tutorial/introduction.html
 * int, float
 * Arithmatic Operation: +, -, *, / float division, // floor division, % module(remainder), **
 #### varible_name = init_value
-1. declaration & assignment simultaneously(variable defined)
+1. declaration & assignment at same time (variable defined)
 2. Ortherwise => NameError: name 'variable_name' is not defined
 ### Boolean
 * True, False
