@@ -8,7 +8,7 @@ https://docs.python.org/3/tutorial/introduction.html
 2. Ortherwise => NameError: name 'variable_name' is not defined
 ### Boolean
 * True, False
-* logical operation: AND, OR
+* logical operators: and, or
 * short-circuit
 1. non-zero number => true; zero => False
 2. None => False
