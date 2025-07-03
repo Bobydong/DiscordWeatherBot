@@ -5,7 +5,7 @@ https://docs.python.org/3/tutorial/introduction.html
 * Arithmatic Operation: +, -, *, / float division, // floor division, % module(remainder), **
 * varible_name = init_value
 1. declaration & assignment simultaneously(variable defined)
-2. NameError: name 'variable_name' is not defined
+2. Ortherwise => NameError: name 'variable_name' is not defined
 ### Boolean
 * True, False
 * logical operation: AND, OR
