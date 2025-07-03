@@ -1,16 +1,19 @@
 https://docs.python.org/3/tutorial/introduction.html
 
 ### Number
-* int, float, bool, str
-* / float division, // floor division, % module(remainder)
+* int, float
+* Arithmatic Operation: +, -, *, / float division, // floor division, % module(remainder), **
 * varible_name = init_value
 1. declaration & assignment simultaneously(variable defined)
 2. NameError: name 'variable_name' is not defined
-* True OR False
+### Boolean
+* True, False
+* logical operation: AND, OR
+* short-circuit
 1. non-zero number => true; zero => False
-2. None, False => false
+2. None => False
 3. empty container(sequence, str) => False
-4. using 'in' to test if container contains a value
+4. use 'in' to test if container contains a value
 
 ### str
 * '', ""
