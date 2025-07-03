@@ -18,7 +18,7 @@ https://docs.python.org/3/tutorial/introduction.html
 ### str
 * ' ', " "
 * escape \ (\n, \t)
-* triple-quotes """....""", '''...''' (keep original format, etc. line break)
+* triple-quotes """....""", '''...''' (keep original format, e.g. line break)
   1. unescape \
 * raw string => print(r'C:\some\name')
 * sequence => indexing & slicing
