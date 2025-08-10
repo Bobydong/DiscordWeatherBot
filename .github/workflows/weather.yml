@@ -2,7 +2,7 @@ name: Daily Weather Bot
 
 on:
   schedule:
-#    - cron: '00 11 * * *'  # runs daily at 12:30 UTC (adjust this!)
+    - cron: '00 11 * * *'  # runs daily at 12:30 UTC (adjust this!)
   workflow_dispatch:
 
 jobs:
